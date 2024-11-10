@@ -1,0 +1,6 @@
+:root{
+    --herobackground: #ffffff;
+}
+.hero{
+    background-color: var(--herobackground); 
+}

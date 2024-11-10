@@ -1,13 +1,17 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*//+
+ * This CSS rule applies to all elements in the document.//+
+ * It sets the box-sizing property to border-box, which means that the width and height properties 
+ include the padding and border in the element's total width and height.//+
+ * It also sets the margin, padding, and font-family properties to default values.//+
+ */
+*{
+    box-sizing: border-box;/*
+    border-box behavior:
+ When you set box-sizing: border-box;, it changes this calculation.
+ Now, the specified width and height of an element will include 
+ the content, padding, and border. This means that adding padding 
+ or a border will not increase the element's overall dimensions.*/
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit',Arial, Helvetica, sans-serif;
 }
