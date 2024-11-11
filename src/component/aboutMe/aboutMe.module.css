@@ -1,0 +1,98 @@
+@import "../../var.css";
+
+.aboutSection{
+    position: relative;
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 1;
+    background: linear-gradient(250deg, var(--color-bg) 80%, var(--color-primary) 10%);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 5%;
+    gap: 50px;
+    transition: flex-direction 0.4s ease; /* Smooth animation for layout change */
+    z-index: 1;
+}
+
+.imageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid rgba(204, 204, 213, 0.909);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Prevents container from shrinking */
+    transition: transform 1s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.aboutImageWrapper {
+    /* Tilt animation on the inner wrapper */
+    animation: tilt 5s ease-in-out infinite;
+}
+.imageContainer:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+@keyframes tilt {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(2deg);
+    }
+    75% {
+        transform: rotate(-2deg);
+    }
+}
+.dp{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.aboutText {
+    max-width: 500px;
+    font-family: var(--font-roboto);
+    color: var(--color-text);
+}
+
+.aboutSection h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 40px;
+    font-family: var(--font-roboto);
+    color: var(--color-text);
+}
+
+.aboutText p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:830px) {
+    .about {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        gap: 30px;
+    }
+    .imageContainer {
+        width: 200px;
+        height: 200px;
+        transform: translateY(-20px); /* Smooth slide effect */
+    }
+    .aboutSection{
+        background: linear-gradient(350deg, var(--color-bg) 80%, #576cbc 10%);
+    }
+}
