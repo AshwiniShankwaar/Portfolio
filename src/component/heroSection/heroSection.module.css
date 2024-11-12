@@ -147,6 +147,28 @@
 .github:hover{
     transform: scale(1.2);
 }
+.button {
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    background-color: #151515;
+    color: var(--color-text);
+    border-radius: 7px;
+    font-weight: 600;
+    font-family: var(--font-roboto);
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+  }
+  
+  .button:hover {
+    transform: translateY(-3px);
+  }
+  .buttonSection{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+  }
 @media screen and (max-width: 830px) {
     .container{
         flex-direction: column-reverse;
