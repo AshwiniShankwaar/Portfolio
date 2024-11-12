@@ -4,7 +4,7 @@ import aboutData from "../../data/About.json";
 function AboutMe() {
   const { name, aboutMe } = aboutData[0];
   return (
-    <section className={style.aboutSection}>
+    <section className={style.aboutSection} id="about">
       <h2>About Me</h2>
       <div className={style.about}>
         <div className={style.imageContainer}>

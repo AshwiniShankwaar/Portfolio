@@ -42,7 +42,7 @@ const Projects = () => {
     
 
     return (
-        <section className='projectSection'>
+        <section className='projectSection' id='projects'>
         <h2>Projects</h2>
         <div className="projectTimeline" ref={timelineRef}>
             

@@ -56,7 +56,7 @@ const Skills = () => {
   }, [inView, skillData, speed]);
 
   return (
-    <section ref={skillSectionRef} className="skillSection">
+    <section ref={skillSectionRef} className="skillSection" id='skills'>
       <h2>My Skills</h2>
       <div className='skillContainer'>
         {skillData.map((skill, index) => (
