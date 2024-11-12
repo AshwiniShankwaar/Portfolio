@@ -63,5 +63,6 @@
     font-size: 18px;
     font-weight: 500;
     color: var(--color-text);
+    font-family: var(--font-roboto);
     text-align: center;
 }

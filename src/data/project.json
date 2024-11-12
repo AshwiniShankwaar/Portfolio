@@ -1,0 +1,34 @@
+[
+  {
+    "name": "janshayog",
+    "time": "2022-2023",
+    "technology_used": "java, SpringBoot, ReactJs, Mysql",
+    "url":"http://bitgeektalks.pythonanywhere.com",
+    "url_to":"Source code",
+    "describe": "The ref value 'skillSectionRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy'skill SectionRef.current' to a variable inside the effect, and use that variable in the cleanup function"
+  },
+  {
+    "name": "blog website",
+    "time": "2022-2023",
+    "technology_used": "java, SpringBoot, ReactJs, Mysql",
+    "url":"http://bitgeektalks.pythonanywhere.com",
+    "url_to":"Source code",
+    "describe": "The ref value 'skillSectionRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy'skill SectionRef.current' to a variable inside the effect, and use that variable in the cleanup function"
+  },
+  {
+    "name": "example 2",
+    "time": "2022-2023",
+    "technology_used": "java, SpringBoot, ReactJs, Mysql",
+    "url":"http://bitgeektalks.pythonanywhere.com",
+    "url_to":"visit website",
+    "describe": "The ref value 'skillSectionRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy'skill SectionRef.current' to a variable inside the effect, and use that variable in the cleanup function"
+  },
+  {
+    "name": "example 3",
+    "time": "2022-2023",
+    "technology_used": "java, SpringBoot, ReactJs, Mysql",
+    "url":"http://bitgeektalks.pythonanywhere.com",
+    "url_to":"Source code",
+    "describe": "The ref value 'skillSectionRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy'skill SectionRef.current' to a variable inside the effect, and use that variable in the cleanup function"
+  }
+]

@@ -72,6 +72,11 @@
   }
   .textBox h1{
     font-size: 18px;
+    font-family: var(--font-roboto);
+  }
+  .textBox p{
+    font-size: 12px;
+    font-family: var(--font-roboto);
   }
   .left-container {
     left: 0;
@@ -121,7 +126,30 @@
     border-right: 15px solid #fff;
     left: -14px;
   }
+  .toolkit {
+    position: absolute;
+    bottom: -30px;
+    border-radius: 10px;
+    color: var(--color-text);
+    background: var(--color-primary);
+    padding: 5px 10px;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(65, 82, 232, 0.7);
+    visibility: hidden;
+  }
   
+  .container:hover .toolkit{
+    visibility: visible;
+  }
+
+  .left-container .toolkit{
+    right: 0;
+    margin-right: 10px;
+  }
+  .right-container .toolkit{
+    left: 0;
+    margin-left: 10px;
+  }
   @media screen and (max-width: 768px) {
     .projectTimeline {
       margin: 50px auto;

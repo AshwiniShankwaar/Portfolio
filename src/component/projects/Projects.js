@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './projects.css';
 import logo from '../../assets/projects/logo.png';
-
+import projects from '../../data/project.json';
 const Projects = () => {
     const timelineRef = useRef(null);
     const containerRefs = useRef([]);
@@ -39,18 +39,7 @@ const Projects = () => {
         }
     }, []);
 
-    const projects = [{
-        name: "janshayog", time: "2022-2023", describe: "The ref value 'skillSectionRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy'skill SectionRef.current' to a variable inside the effect, and use that variable in the cleanup function"
-    }, {
-        name: "blog website", time: "2022-2023", describe: "The ref value 'skillSectionRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy'skill SectionRef.current' to a variable inside the effect, and use that variable in the cleanup function"
-    },
-    {
-        name: "example 2", time: "2022-2023", describe: "The ref value 'skillSectionRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy'skill SectionRef.current' to a variable inside the effect, and use that variable in the cleanup function"
-    },
-    {
-        name: "example 3", time: "2022-2023", describe: "The ref value 'skillSectionRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy'skill SectionRef.current' to a variable inside the effect, and use that variable in the cleanup function"
-    },
-    ];
+    
 
     return (
         <section className='projectSection'>
@@ -68,7 +57,9 @@ const Projects = () => {
                         <h1>{project.name}</h1>
                         <small>{project.time}</small>
                         <p>{project.describe}</p>
+                        <span><b>Technology used:</b> <small>{project.technology_used}</small></span>
                         <span className={`${index % 2 === 0 ? 'left-container-arrow' : 'right-container-arrow'}`}></span>
+                        <a href={project.url} className='toolkit' target='_blank' rel="noreferrer">{project.url_to}</a>
                     </div>
                 </div>
             ))}
