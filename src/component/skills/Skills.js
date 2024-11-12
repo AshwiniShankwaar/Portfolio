@@ -1,21 +1,11 @@
 import './skills.css';
-import { useState, useEffect, useRef, useMemo } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import skillData from '../../data/Skills.json'; // Import JSON file
 
 const Skills = () => {
-  const skillSet = useMemo(
-    () => [
-      { name: "Java", percentage: 90 },
-      { name: "ReactJS", percentage: 85 },
-      { name: "Spring Boot", percentage: 80 },
-      { name: "API Dev", percentage: 88 },
-      { name: "Microservice Dev", percentage: 85 },
-    ],
-    []
-  );
-
   const [inView, setInView] = useState(false);
   const [progressValues, setProgressValues] = useState(
-    Array(skillSet.length).fill(0)
+    Array(skillData.length).fill(0)
   );
 
   const skillSectionRef = useRef(null);
@@ -45,7 +35,7 @@ const Skills = () => {
 
   useEffect(() => {
     if (inView) {
-      skillSet.forEach((skill, index) => {
+      skillData.forEach((skill, index) => {
         let progress = 0;
         const interval = setInterval(() => {
           setProgressValues((prevValues) => {
@@ -63,13 +53,13 @@ const Skills = () => {
         }, speed);
       });
     }
-  }, [inView, skillSet, speed]);
+  }, [inView, skillData, speed]);
 
   return (
     <section ref={skillSectionRef} className="skillSection">
       <h2>My Skills</h2>
       <div className='skillContainer'>
-        {skillSet.map((skill, index) => (
+        {skillData.map((skill, index) => (
           <div key={index} className="skillCard">
             <div
               className="circularProcess"
