@@ -1,0 +1,165 @@
+.projectSection{
+  margin-top: 40px;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.projectSection h2{
+  font-size: 2rem;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 40px;
+    font-family: var(--font-roboto);
+    color: var(--color-text);
+}
+.projectTimeline {
+    position: relative;
+    
+  }
+  
+  .projectTimeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 0; /* Start with 0 height for animation */
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 1; /* Ensure line is behind other content */
+    transition: height 2s ease-out; /* Smooth height increase */
+  }
+  
+  .projectTimeline.animate-line::after {
+    height: 100%; /* Target full height once animated */
+  }
+  
+  .container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .container.animate {
+    opacity: 1;
+    transform: translateY(0);
+    animation: moveDown 1s forwards;
+  }
+  
+  @keyframes moveDown {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .textBox {
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 12px;
+    z-index: 2;
+  }
+  .textBox h1{
+    font-size: 18px;
+  }
+  .left-container {
+    left: 0;
+    z-index: 10;
+  }
+  
+  .right-container {
+    left: 50%;
+    z-index: 10;
+  }
+  
+  .left-container img,
+  .right-container img {
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    top: 32px;
+    z-index: 3;
+    background-color: #fff;
+  }
+  
+  .left-container img {
+    right: -20px;
+  }
+  
+  .right-container img {
+    left: -20px;
+  }
+  
+  .left-container-arrow,
+  .right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 2;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+  
+  .left-container-arrow {
+    border-left: 15px solid #fff;
+    right: -15px;
+  }
+  
+  .right-container-arrow {
+    border-right: 15px solid #fff;
+    left: -14px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .projectTimeline {
+      margin: 50px auto;
+    }
+  
+    .projectTimeline::after {
+      left: 31px;
+    }
+  
+    .container {
+      width: 90%;
+      padding-left: 80px;
+      padding-right: 25px;
+    }
+  
+    .textBox {
+      font-size: 13px;
+    }
+  
+    .textBox small {
+      margin-bottom: 10px;
+    }
+  
+    .right-container {
+      left: 0; /* Align to left in mobile view */
+    }
+  
+    .left-container img,
+    .right-container img {
+      left: 10px; /* Position images to the left in mobile view */
+    }
+  
+    /* Adjust arrows to always point to the left in mobile */
+    .left-container-arrow,
+    .right-container-arrow {
+      border-right: 15px solid #fff;
+      border-left: none;
+      left: -14px; /* Adjust positioning for left alignment */
+    }
+  }
+  

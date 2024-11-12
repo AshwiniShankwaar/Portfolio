@@ -11,10 +11,10 @@ function HeroSection(){
             </p>
             <a href='mailto:ashwinishankwaar@gmail.com' className={style.contactBtn}>
                 Contact Me 
-                <i class="fas fa-paper-plane"></i>
+                <i className="fas fa-paper-plane"></i>
                 </a>
         </div>
-        <img src={hero} alt="hero image" className={style.heroImg}/>
+        <img src={hero} alt="hero_image" className={style.heroImg}/>
         <div className={style.topBlur}></div>
         <div className={style.bottomBlur}></div>
         <div id='socialMedia' className={style.social}>

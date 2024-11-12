@@ -1,41 +1,44 @@
 import './skills.css';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 
 const Skills = () => {
-  const skillSet = [
-    { name: "Java", percentage: 90 },
-    { name: "ReactJS", percentage: 85 },
-    { name: "Spring Boot", percentage: 80 },
-    { name: "API Dev", percentage: 88 },
-    { name: "Microservice Dev", percentage: 85 },
-  ];
+  const skillSet = useMemo(
+    () => [
+      { name: "Java", percentage: 90 },
+      { name: "ReactJS", percentage: 85 },
+      { name: "Spring Boot", percentage: 80 },
+      { name: "API Dev", percentage: 88 },
+      { name: "Microservice Dev", percentage: 85 },
+    ],
+    []
+  );
 
-  const [inView, setInView] = useState(false); // To track visibility of the section
+  const [inView, setInView] = useState(false);
   const [progressValues, setProgressValues] = useState(
-    Array(skillSet.length).fill(0) // Initialize progress for each skill
+    Array(skillSet.length).fill(0)
   );
 
   const skillSectionRef = useRef(null);
-  const speed = 20; // Speed of animation
+  const speed = 20;
 
   useEffect(() => {
-    // IntersectionObserver to check if the skill section is in view
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setInView(true);
         }
       },
-      { threshold: 0.5 } // 50% of the section must be visible for the animation to start
+      { threshold: 0.5 }
     );
 
-    if (skillSectionRef.current) {
-      observer.observe(skillSectionRef.current);
+    const currentSectionRef = skillSectionRef.current;
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef);
     }
 
     return () => {
-      if (skillSectionRef.current) {
-        observer.unobserve(skillSectionRef.current);
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef);
       }
     };
   }, []);
@@ -63,10 +66,9 @@ const Skills = () => {
   }, [inView, skillSet, speed]);
 
   return (
-    
-      <section ref={skillSectionRef} className="skillSection">
-        <h2>My Skills</h2>
-        <div className='skillContainer'>
+    <section ref={skillSectionRef} className="skillSection">
+      <h2>My Skills</h2>
+      <div className='skillContainer'>
         {skillSet.map((skill, index) => (
           <div key={index} className="skillCard">
             <div
@@ -80,9 +82,8 @@ const Skills = () => {
             <span className="skillSetName">{skill.name}</span>
           </div>
         ))}
-        </div>
-      </section>
-
+      </div>
+    </section>
   );
 };
 
