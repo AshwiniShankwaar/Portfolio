@@ -18,9 +18,9 @@ function HeroSection(){
         <div className={style.topBlur}></div>
         <div className={style.bottomBlur}></div>
         <div id='socialMedia' className={style.social}>
-        <a href='' target='_blank' rel="noopener noreferrer" className={style.instagram}><i class="fa-brands fa-instagram"></i></a>
-        <a href='' target='_blank' rel="noopener noreferrer" className={style.linkedin}><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href='' target='_blank' rel="noopener noreferrer" className={style.github}><i class="fa-brands fa-github"></i></a>
+        <a href='https://www.instagram.com/ashwini_shankwaar/' target='_blank' rel="noopener noreferrer" className={style.instagram}><i class="fa-brands fa-instagram"></i></a>
+        <a href='https://www.linkedin.com/in/ashwini-kumar-3018a71b2/' target='_blank' rel="noopener noreferrer" className={style.linkedin}><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href='https://github.com/AshwiniShankwaar' target='_blank' rel="noopener noreferrer" className={style.github}><i class="fa-brands fa-github"></i></a>
         </div>
     </section>
 }

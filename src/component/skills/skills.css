@@ -1,0 +1,67 @@
+@import '../../var.css';
+.skillSection{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 1;
+    gap:20px
+}
+.skillSection h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 40px;
+    font-family: var(--font-roboto);
+    color: var(--color-text);
+}
+.skillContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.skillCard{
+    display: flex;
+    width: 180px;
+    padding: 25px 5px;
+    border-radius: 8px;
+    background: var(--color-dark);
+    row-gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.circularProcess{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(#7d2ae8 3.6deg,#ededed 0deg);
+}
+.circularProcess::before{
+    content: "";
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.processValue{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #7d2ae8;
+}
+.skillSetName{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text);
+    text-align: center;
+}
