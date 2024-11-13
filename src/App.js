@@ -6,7 +6,7 @@ import AboutMe from './component/aboutMe/AboutMe';
 import Skills from './component/skills/Skills';
 import Projects from './component/projects/Projects';
 import Footer from './component/footer/Footer';
-import Experience from './component/experience/Experience';
+
 function App() {
   return (
     <div className='app'>
@@ -15,7 +15,6 @@ function App() {
      <AboutMe/>
      <Skills/>
      <Projects/>
-     <Experience/>
      <Footer/>
     </div>
   );
