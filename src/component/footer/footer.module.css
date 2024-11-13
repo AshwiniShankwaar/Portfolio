@@ -1,12 +1,13 @@
 @import "../../var.css";
 
-.footer{
+.footer {
     color: var(--color-text);
     text-align: center;
     margin-top: 50px;
     font-family: var(--font-roboto);
 }
-.footer .msg{
+
+.footer .msg {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -15,40 +16,54 @@
     color: var(--color-text);
     text-align: center;
     margin-bottom: 30px;
-    font-family: var(--font-roboto); 
+    font-family: var(--font-roboto);
 }
-.msg p{
+
+.msg p {
     overflow: hidden;
     display: inline-block;
     width: 320px;
     white-space: nowrap;
-    border-right: 1px solid ;
-    animation: typing 3s steps(22) forwards,
-    blink 1s step-end infinite;;
+    border-right: 1px solid;
 }
+
+.typing p {
+    animation: typing 3s steps(22) forwards, blink 1s step-end infinite;
+}
+
 @keyframes typing {
-    from{
+    from {
         width: 0;
     }
-    to{
+    to {
         width: 320px;
     }
 }
+
 @keyframes blink {
-    50%{
+    50% {
         border-color: transparent;
     }
 }
-.contactBtn{
+
+.contactBtn {
     text-decoration: none;
     color: var(--color-primary);
-    font-size:  20px;
+    font-size: 20px;
     font-family: var(--font-roboto);
     transition: transform 0.3s ease-in-out;
 }
+
 .contactBtn:hover {
-    transform: scale(1.05); /* Scale up slightly on hover */
+    transform: scale(1.05);
 }
-.contactBtn i{
+
+.contactBtn i {
     margin-left: 10px;
+}
+
+@media screen and (max-width:786px) {
+    .footer .msg{
+        flex-direction: column;
+    }
 }
