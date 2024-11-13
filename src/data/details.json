@@ -3,18 +3,12 @@
     "name": "Ashwini Kumar",
     "experience": [
       {
-        "Employer": "Accenture",
+        "employer": "Accenture",
         "role": "Application developer",
         "experience": "1 year",
         "start": "Nov 2023",
-        "end": "present"
-      },
-      {
-        "Employer": "Accenture",
-        "role": "Application developer",
-        "experience": "1 year",
-        "start": "Nov 2023",
-        "end": "present"
+        "end": "present",
+        "location":"Pune"
       }
     ]
   }
