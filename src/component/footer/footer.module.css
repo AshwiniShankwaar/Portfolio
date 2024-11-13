@@ -10,11 +10,34 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     color: var(--color-text);
     text-align: center;
     margin-bottom: 30px;
     font-family: var(--font-roboto); 
+}
+.msg p{
+    overflow: hidden;
+    display: inline-block;
+    width: 320px;
+    white-space: nowrap;
+    border-right: 1px solid ;
+    animation: typing 3s steps(22) forwards,
+    blink 1s step-end infinite;;
+}
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 320px;
+    }
+}
+@keyframes blink {
+    50%{
+        border-color: transparent;
+    }
 }
 .contactBtn{
     text-decoration: none;
