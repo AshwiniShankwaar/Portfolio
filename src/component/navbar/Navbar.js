@@ -8,7 +8,7 @@ const Navbar =()=>{
     const [menuOpen,setMenuOpen] = useState(false);
     const {name} = details[0];
     return <nav className='navbar'>
-        <a href='/' className='title'>{name}</a>
+        <p className='title'>{name}</p>
         <div className='menu'>
             <img alt='menuBtn' className="menuBtn" src={menuOpen?closeIcon:menuIcon} onClick={()=>setMenuOpen(!menuOpen)}/>
             <ul className={`menuItem ${menuOpen ? "menuOpen" : ""}`} onClick={()=>setMenuOpen(!menuOpen)}>
